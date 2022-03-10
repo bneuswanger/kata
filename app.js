@@ -177,25 +177,126 @@
 // console.log(alphabetPosition('This - has puncTuation.'))
 
 
+//////////// Challenge 6 - Not from CodeWars, but from Discord chat////////////
+// //Write a function that checks a string and returns true if all the letters of the alphabet are present.  If not, return false.
 
-//////////// Challenge 6 ////////////
+// //I wrote this one to satisfy the boolean return requirement
+// const testString = (string) => {
+//     const alphabetArr = [
+//         "a",
+//         "b",
+//         "c",
+//         "d",
+//         "e",
+//         "f",
+//         "g",
+//         "h",
+//         "i",
+//         "j",
+//         "k",
+//         "l",
+//         "m",
+//         "n",
+//         "o",
+//         "p",
+//         "q",
+//         "r",
+//         "s",
+//         "t",
+//         "u",
+//         "v",
+//         "w",
+//         "x",
+//         "y",
+//         "z"
+//     ]
+//     const testSet = new Set()
+//     for (let l of string) {
+//         testSet.add(l.toLowerCase())
+//     }
+//     const testArr = Array.from(testSet)
+//     return alphabetArr.every(el => testArr.includes(el))
+// }
+// console.log(testString('abcd EFGz')) //false
+// console.log(testString('abcdefghijklmnopqrstuvwxyz')) //true
+// console.log(testString('I am a very purple cat')) //false
+// console.log(testString('All because chickens do everything funny gives her introspection jinxed krill lovely mannerisms now overtly play qribbage restfully since the underwear velvet was xylem yarn zorking.')) //true
 
-// Given a string of words, you need to find the highest scoring word.
-// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
-// You need to return the highest scoring word as a string.
-// If two words score the same, return the word that appears earliest in the original string.
-// All letters will be lowercase and all inputs will be valid.
+// //I wrote this one to show what is present and what is missing
+// const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+
+// const test = (string) => {
+//     const testSet = new Set()
+//     for (let l of string) {
+//         testSet.add(l.toLowerCase())
+//     }
+//     let contains = []
+//     let missing = []
+//     for (let l of alphabet) {
+
+//         if (testSet.has(l)) {
+//             contains.push(l)
+//         } else {
+//             missing.push(l)
+//         }
+//     }
+//     console.log(`Test phrase contains: ${contains.join(',')}`)
+//     console.log(`Test phrase missing: ${missing.join(',')}`)
+// }
+
+// test('abcd efgh ijklmn opqrs') //Test phrase contains: a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s     Test phrase missing: t,u,v,w,x,y,z
 
 
 
 
+//////////// Challenge 7 - Not from Codewars, but from Discord user who wanted help////////////
+// // This user wanted to capitalize the names of a person in a string, but selectively not capitalize certain words (van, den, der, etc.)
+
+// // Using using a function - console.logs included are various points so you can visualize what's happening.
+// const fixName = (name) => {
+//     const namesArray = name.split(' ')
+//     console.log(namesArray)
+//     let tempArray = []
+//     for (let word of namesArray) {
+//         if (word !== "van" && word !== "den" && word !== "der" && word !== "de" && word !== "ter") {
+//             tempArray.push(word.charAt(0).toUpperCase() + word.slice(1))
+//         } else {
+//             tempArray.push(word)
+//         }
+//     }
+//     console.log(tempArray)
+//     const newName = tempArray.join(' ')
+//     console.log(newName)
+// }
+// fixName("iris van herpen")
+// fixName("fred de roma")
+// fixName("george is cool")
+// fixName("den will smith")
+
+
+// // Without using a function - console.logs included are various points so you can visualize what's happening.
+// let nameDutch = "iris van herpen"
+// let particles = nameDutch.split(' ')
+// console.log(particles)
+// let temp = []
+// for (let checkDutch of particles) {
+//     if (checkDutch !== "van" && checkDutch !== "den" && checkDutch !== "der" && checkDutch !== "de" && checkDutch !== "ter") {
+//         temp.push(checkDutch.charAt(0).toUpperCase() + checkDutch.slice(1))
+//     } else {
+//         temp.push(checkDutch)
+//     }
+// }
+// console.log(temp)
+// const fixedName = temp.join(' ')
+// console.log(fixedName)
 
 
 
-
-
-//////////// Challenge 7 ////////////
 //////////// Challenge 8 ////////////
+
+
+
 //////////// Challenge 9 ////////////
 //////////// Challenge 10 ////////////
 //////////// Challenge 11 ////////////
