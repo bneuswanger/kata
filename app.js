@@ -20,8 +20,6 @@
 // console.log(arrayDiff([3, 4], [3]))       // [4]
 // console.log(arrayDiff([], [4, 5]))        // []
 
-
-
 // ////////// Challenge 2 ////////////
 // // Digital root is the recursive sum of all the digits in a number.
 // // Given n, take the sum of the digits of n. If that value has more than
@@ -51,15 +49,12 @@
 //     return sumstring > 9 ? digital_root(sumstring) : sumstring
 // }
 
-
 // // Tests                    // Correct Results
 // digital_root(16)            // 7
 // digital_root(942)           // 6
 // digital_root(132189)        // 6
 // digital_root(493193)        // 2
 // digital_root(4786532968753) // 1
-
-
 
 // ////////// Challenge 3 ////////////
 // // Some numbers have funny properties. For example:
@@ -96,11 +91,6 @@
 // digPow(695, 2)    // 2                6² + 9³ + 5⁴= 1390 = 695 * 2
 // digPow(46288, 3)  // 51               4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
 
-
-
-
-
-
 // //////////// Challenge 4 ////////////
 // // Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
 // // If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
@@ -127,7 +117,6 @@
 //     return r % 1 ? -1 : ++r * r
 // }
 
-
 // // Test                     //Correct Result
 // console.log(findNextSquare(319225))       // 320356
 // console.log(findNextSquare(625))          // 676
@@ -135,8 +124,6 @@
 // console.log(findNextSquare(15241383936))  // 15241630849
 // console.log(findNextSquare(155))          // -1
 // console.log(findNextSquare(342786627))    // -1
-
-
 
 // //////////// Challenge 5 ////////////
 // // Given random string with letters, numbers, and/or symbols, return a string such that each letter of the original string is replaced it's corresponding number in the alphabet.  eg) a = 1, b = 2, etc.  The string "baa!" should return "2 1 1".
@@ -170,12 +157,10 @@
 
 // // .join(' ') converts the array object ['a', 'b'] back into a string 'a b'
 
-
 // console.log(alphabetPosition('coot'))
 // console.log(alphabetPosition('Zoo'))
 // console.log(alphabetPosition('I am Groot'))
 // console.log(alphabetPosition('This - has puncTuation.'))
-
 
 //////////// Challenge 6 - Not from CodeWars, but from Discord chat////////////
 // //Write a function that checks a string and returns true if all the letters of the alphabet are present.  If not, return false.
@@ -225,7 +210,6 @@
 // //I wrote this one to show what is present and what is missing
 // const alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-
 // const test = (string) => {
 //     const testSet = new Set()
 //     for (let l of string) {
@@ -247,9 +231,6 @@
 
 // test('abcd efgh ijklmn opqrs') //Test phrase contains: a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s     Test phrase missing: t,u,v,w,x,y,z
 
-
-
-
 //////////// Challenge 7 - Not from Codewars, but from Discord user who wanted help////////////
 // // This user wanted to capitalize the names of a person in a string, but selectively not capitalize certain words (van, den, der, etc.)
 
@@ -269,11 +250,10 @@
 //     const newName = tempArray.join(' ')
 //     console.log(newName)
 // }
-// fixName("iris van herpen")
-// fixName("fred de roma")
-// fixName("george is cool")
-// fixName("den will smith")
-
+// fixName("iris van herpen") // Iris van Herpen
+// fixName("fred de roma") // Fred de Roma
+// fixName("george is cool") //George Is Cool
+// fixName("den will smith") // den Will Smith
 
 // // Without using a function - console.logs included are various points so you can visualize what's happening.
 // let nameDutch = "iris van herpen"
@@ -291,11 +271,46 @@
 // const fixedName = temp.join(' ')
 // console.log(fixedName)
 
+// // An alternative way, posted by another user
+// let dutchName = prompt("Enter some dutch name: ");
+// let parseName = dutchName.split(' ')
+// let partic = ["van", "den", "der", "de", "ter"]
 
+// for (let i = 0; i < parseName.length; i++) {
+//     if (!partic.includes(parseName[i])) {
+//         parseName[i] = parseName[i].charAt(0).toUpperCase() + parseName[i].slice(1);
+//     }
+// }
 
-//////////// Challenge 8 ////////////
+// let modifiedName = parseName.join(' ');
+// console.log(modifiedName);
 
+//////////// Challenge 8 - From Discord ////////////
+//Write a function to test whether a string if a string is a palindrome. Return true or false.
 
+// const isPalindrome = (str) => {
+//     let loopNum;
+//     str.length % 2 === 0 ? loopNum = str.length / 2 : loopNum = (str.length - 1) / 2;
+//     for (let i = 0; i < loopNum; i++) {
+//       if (str[i] !== str[str.length - (i + 1)]) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   };
+
+//   //even trues
+//   console.log(isPalindrome('raccar'));
+//   console.log(isPalindrome('abccba'));
+//   //odd trues
+//   console.log(isPalindrome('racecar'));
+//   console.log(isPalindrome('tacocat'));
+//   //even falses
+//   console.log(isPalindrome('aaccar'));
+//   console.log(isPalindrome('abdcba'));
+//   //odd false
+//   console.log(isPalindrome('racecer'));
+//   console.log(isPalindrome('abcddba'));
 
 //////////// Challenge 9 ////////////
 //////////// Challenge 10 ////////////
